@@ -87,6 +87,9 @@ plugins/ios.json
 www/
 $RECYCLE.BIN/
 
+resources/
+key.txt
+.editorconfig
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
