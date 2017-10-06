@@ -16,6 +16,12 @@ export class Example_5Page {
 
   watchId: any;
 
+  options = {
+    enableHighAccuracy: true,
+    timeout: 3000,
+    maximumAge: 0
+  };
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
@@ -33,14 +39,16 @@ export class Example_5Page {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         })
-      });
+      }, (error) => {
+
+      }, this.options);
     }, 3000);
   }
 
   startMap() {
     let posMaceio = { lat: -9.616139, lng: -35.817239 }
     let map = new google.maps.Map(this.mapElement.nativeElement, {
-      zoom: 12,
+      zoom: 18,
       center: posMaceio,
       mapTypeId: 'roadmap'
     });
@@ -59,10 +67,10 @@ export class Example_5Page {
         //start position
         this.addPolyLine(pos);
 
-        // let marker = new google.maps.Marker({
-        //   position: pos,
-        //   map: map
-        // });
+        let marker = new google.maps.Marker({
+          position: pos,
+          map: map
+        });
         map.setCenter(pos);
         this.map = map;
 
