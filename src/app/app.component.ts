@@ -19,6 +19,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'First example', component: 'Example_1Page' },
+      { title: 'Second example', component: 'Example_2Page' }
     ];
 
   }
