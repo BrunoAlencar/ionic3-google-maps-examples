@@ -12,14 +12,17 @@ export class MyApp {
 
   rootPage: any = 'Example_1Page';
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     this.pages = [
       { title: 'First example', component: 'Example_1Page' },
-      { title: 'Second example', component: 'Example_2Page' }
+      { title: 'Second example', component: 'Example_2Page' },
+      { title: 'Third example', component: 'Example_3Page' },
+      { title: 'Fourth example', component: 'Example_4Page' },
+      { title: 'Fifth example', component: 'Example_5Page' },
     ];
 
   }
